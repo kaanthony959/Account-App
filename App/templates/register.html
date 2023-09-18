@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>記帳系統</title>
+</head>
+<body>
+  {% if alert %}
+    <div class="alert">{{ alert }}</div>
+  {% endif %}
+
+  {% if result == "" or result == "False"%}
+  <form method="post">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <input type="submit" name="send" value="送出">
+  </form>
+  {% else %}
+    <div class="success">注册成功</div>
+  {% endif %}
+</body>
+</html>
+
+
